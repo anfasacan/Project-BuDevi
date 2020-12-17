@@ -7,7 +7,7 @@
     <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
       <div class="container position-relative">
         <div class="site-logo">
-          <a href="index.html"><img src="{{ URL::asset ('frontend/images/liverpool.png')}}" height="150" alt=""></a>
+          <a href="{{url ('/')}}"><img src="{{ URL::asset ('frontend/images/liverpool.png')}}" height="150" alt=""></a>
         </div>
 
         <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>

@@ -8,6 +8,7 @@ use App\Player;
 use App\Kiper;
 use App\Midfilder;
 use App\Defender;
+use App\Highlight;
 
 class PagesController extends Controller
 {
@@ -16,7 +17,8 @@ class PagesController extends Controller
         $news = News::latest()->paginate(3);
         $gamer = Game::latest()->paginate(3);
         $lastgame = Game::latest()->paginate(1);
-        return view('home.index', compact('news','gamer','lastgame'));
+        $highlight = Highlight::latest()->paginate(10);
+        return view('home.index', compact('news','gamer','lastgame','highlight'));
         // return view('home.index', compact('gamer'));
     }
 
@@ -24,6 +26,12 @@ class PagesController extends Controller
     public function match() {
         $gamer = Game::latest()->paginate(5);
         return view('match.index', compact('gamer'));
+    }
+
+    //Buat Highlights
+    public function highlight() {
+        $highlight = Highlight::latest()->paginate(9);
+        return view('highlight.index', compact('highlight'));
     }
 
     //Team atau Players

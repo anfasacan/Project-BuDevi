@@ -29,6 +29,7 @@ Route::get('/','PagesController@home');
     Route::get('/readberita/{id}','PagesController@readberita')->name('news.isi_berita');
     Route::get('/team', 'PagesController@team');
     Route::get('/about', 'PagesController@about');
+    Route::get('/highlight', 'PagesController@highlight');
     
 //manage auth
 Route::group(['middleware' => 'auth'], function(){

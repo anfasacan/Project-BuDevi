@@ -40,6 +40,8 @@ class HighlightsController extends Controller
             'judul' => 'required',
             'isi_highlight' => 'required',
             'link_video' => 'required',
+            'score' => 'required',
+            'musuh' => 'required',
             'gambar' => 'required'
         ]);
 
@@ -50,6 +52,8 @@ class HighlightsController extends Controller
             'judul' => $request->judul,
             'isi_highlight' => $request->isi_highlight,
             'link_video' => $request->link_video,
+            'score' => $request->score,
+            'musuh' => $request->musuh,
             'gambar' => 'uploads/news/'.$new_gambar
         ]);
 
@@ -93,6 +97,8 @@ class HighlightsController extends Controller
             'judul' => 'required',
             'isi_highlight' => 'required',
             'link_video' => 'required',
+            'score' => 'required',
+            'musuh' => 'required',
             'gambar' => 'required'
         ]);
 
@@ -107,6 +113,8 @@ class HighlightsController extends Controller
                 'judul' => $request->judul,
                 'isi_highlight' => $request->isi_highlight,
                 'link_video' => $request->link_video,
+                'score' => $request->score,
+                'musuh' => $request->musuh,
                 'gambar' => 'uploads/news/'.$new_gambar
             ];
 
@@ -114,7 +122,9 @@ class HighlightsController extends Controller
             $high_data = [
                 'judul' => $request->judul,
                 'isi_highlight' => $request->isi_highlight,
-                'link_video' => $request->link_video
+                'link_video' => $request->link_video,
+                'score' => $request->score,
+                'musuh' => $request->musuh
             ];
         }
 

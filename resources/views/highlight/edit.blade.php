@@ -51,7 +51,7 @@
                   <button class="btn btn-primary mb-3" type="submit"><i class="fas fa-fw fa-user-plus"></i> Update</button>
                   <div class="pl-lg-4">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="form-group">
                               <label class="form-control-label" for="judul">Judul</label>
                               <input type="text" id="judul" name="judul" class="form-control @error('judul') is-invalid @enderror" placeholder="Masukan Judul" value="{{ $high->judul }}">
@@ -61,11 +61,31 @@
                             </div>
                           </div>
 
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <label class="form-control-label " for="isi_highlight">Isi Highlight</label>
+                              <input type="text" id="isi_highlight" name="isi_highlight" class="form-control @error('isi_highlight') is-invalid @enderror" placeholder="Masukan Isi Highlight" value="{{$high->isi_highlight}}">
+                              @error('isi_highlight')
+                              <div class="invalid-feedback">{{ $message}}</div>
+                              @enderror
+                            </div>
+                          </div>
+
                           <div class="col-lg-6">
                             <div class="form-group">
-                              <label class="form-control-label " for="isi_highlight">Isi Berita</label>
-                              <input type="text" id="isi_highlight" name="isi_highlight" class="form-control @error('isi_highlight') is-invalid @enderror" placeholder="Masukan Isi Highlight" value="{{ $high->isi_highlight }}">
-                              @error('isi_highlight')
+                              <label class="form-control-label " for="score">Score</label>
+                              <input type="text" id="score" name="score" class="form-control @error('score') is-invalid @enderror" placeholder="Masukan Score Liverpool dan Musuh" value="{{$high->score}}">
+                              @error('score')
+                              <div class="invalid-feedback">{{ $message}}</div>
+                              @enderror
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <label class="form-control-label " for="musuh">Lawan Tanding</label>
+                              <input type="text" id="musuh" name="musuh" class="form-control @error('musuh') is-invalid @enderror" placeholder="Masukan Nama Team Lawan Tanding" value="{{$high->musuh}}">
+                              @error('musuh')
                               <div class="invalid-feedback">{{ $message}}</div>
                               @enderror
                             </div>
